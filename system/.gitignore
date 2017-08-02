@@ -1,0 +1,21 @@
+# Exclude everything
+/*
+
+# Include everything in /etc
+!/etc
+
+# Include everything in /src
+!/src
+
+# Include everything in /host/src
+!/host
+/host/*
+!/host/src
+
+# Include everything in /usr/src
+!/usr
+/usr/*
+!/usr/src
+
+# include the gitignore
+!.gitignore
