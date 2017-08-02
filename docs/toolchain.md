@@ -52,13 +52,13 @@ source tools/profile-i686-elf.env
 3. Build Binutils for a generic elf target.
 
 ```bash
-cd system/host/src/rpos-binutils && ./build.sh && cd -
+cd system/host/src/rpos-binutils && ./xbuild.sh && cd -
 ```
 
 4. Build GCC for a generic elf target.
 
 ```bash
-cd system/host/src/rpos-gcc && ./build.sh && cd -
+cd system/host/src/rpos-gcc && ./xbuild.sh && cd -
 ```
 
 5. Import the os specific target.
@@ -76,7 +76,7 @@ cd system/host/bin && for BIN in ar as gcc ranlib; do ln -s i686-elf-$BIN $TARGE
 7. Build Newlib.
 
 ```bash
-cd system/host/src/rpos-newlib && ./build.sh && cd -
+cd system/host/src/rpos-newlib && ./xbuild.sh && cd -
 ```
 
 8. Remove the symlinks used to build newlib.
@@ -88,11 +88,11 @@ find system/host/bin -type l | xargs -n1 unlink
 9. Rebuild Binutils for the OS Specific target
 
 ```bash
-cd system/host/src/rpos-binutils && ./build.sh && cd -
+cd system/host/src/rpos-binutils && ./xbuild.sh && cd -
 ```
 
 10. Rebuild Gcc for the OS Specific target
 
 ```bash
-cd system/host/src/rpos-gcc && ./build.sh && cd -
+cd system/host/src/rpos-gcc && ./xbuild.sh && cd -
 ```
