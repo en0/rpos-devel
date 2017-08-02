@@ -1,0 +1,12 @@
+[submodule "system/host/src/rpos-binutils"]
+	path = system/host/src/rpos-binutils
+	url = git@github.com:en0/rpos-binutils
+[submodule "system/host/src/rpos-gcc"]
+	path = system/host/src/rpos-gcc
+	url = git@github.com:en0/rpos-gcc
+[submodule "system/host/src/rpos-newlib"]
+	path = system/host/src/rpos-newlib
+	url = git@github.com:en0/rpos-newlib
+[submodule "system/host/src/rpos-mkcpio"]
+	path = system/host/src/rpos-mkcpio
+	url = git@github.com:en0/rpos-mkcpio
