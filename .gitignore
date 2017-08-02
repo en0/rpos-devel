@@ -1,0 +1,10 @@
+# Ignore hidden files
+.*
+
+# Ignore any file with a -ignore appended to the end with or without a file
+# type suffix
+*-ignore
+*-ignore.*
+
+# Reinclude this file
+!.gitignore
