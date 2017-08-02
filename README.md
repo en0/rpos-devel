@@ -10,12 +10,6 @@ possible and then overcomplicated it.
 If you are interested in contributing to this code or just want to play around
 with it, take a look at [the documentation](docs/index.md).
 
-## Quick start
-
-1. Build the [toolchain](toolchain.md).
-2. Install QEMU
-3. Run ```make run```
-
 ## Goals
 
 - [x] Kernel loads in higher half
