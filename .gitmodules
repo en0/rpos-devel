@@ -10,3 +10,6 @@
 [submodule "system/host/src/rpos-mkcpio"]
 	path = system/host/src/rpos-mkcpio
 	url = git@github.com:en0/rpos-mkcpio
+[submodule "system/host/src/rpos-kernel"]
+	path = system/host/src/rpos-kernel
+	url = git@github.com:en0/rpos-kernel
