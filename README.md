@@ -1,25 +1,60 @@
 # rpos
 
-Research Project Operating System.
+Research Project Operating System Development Project.
 
-I have made many attempts and building an operating system and never achieved
-my goal to satisfaction. After a significant amount of leanring and
-continuously misplacing my code, I have decided to keep it as simple as
-possible and then overcomplicated it.
+This repo contains the file structure and documentation requried for developing
+the RPOS orperating system. There is very little code in this project, it is
+mostly a collection of submodules and centralized docs designed to aggregate
+all the inforamtion into one place.
 
 If you are interested in contributing to this code or just want to play around
 with it, take a look at [the documentation](docs/index.md).
 
-## Goals
+## File Layout
 
-- [x] Kernel loads in higher half
-- [x] Create flat GDT in kernel .text space
-- [x] IDT gate install system where other code can install handlers
-- [x] IRQ dispatch system where hardware handlers can install int handers.
-- [x] Serial debuging on COM1
-- [x] Coredump on FAULT/TRAP
-- [x] RTC via PIT Channel 0
-- [x] Setup physical memory manager
-- [x] Setup Virtual memory manager
-- [x] 8MB Stack just under the kernel in the virtual address space.
-- [ ] Kernel will pull from it's own small heap at 0xC0400000
+- docs: Contains RPOS documentation.
+- tools: Contains scripts and env files for building and testing code.
+- system: Contains a mock root file structure for RPOS which contains links to
+  submodules.
+
+## system root
+
+The system directory contains all the code and the configuration for building
+and testing RPOS.  The structure should look familure but there are subtle
+diffrences.
+
+### system/host
+
+The host directory contains code and binaries that run in a externally hosted
+environment (external to RPOS). These are things like the the GCC Cross
+Compiler and tools to build initfs.
+
+#### system/host/src
+
+All the submodues that require building on an external host. This includes the
+RPOS Kernel and other pre-install tooling like building initfs.
+
+You can see the submodules under `system/host/src`
+
+### system/usr
+
+The usr directory contains code that intended to run inside RPOS after boot.
+This is theoretical at the moment as RPOS cannot yet run the toolchain.
+
+### system/etc
+
+Contains configuration files that will be added to initfs for building the
+kernel output and creating a bootable image.
+
+## gitignore
+
+Only the following directories under `system` are allowed to be tracked by
+source control.
+
+- system/etc
+- system/src
+- system/usr/src
+- system/host/src
+
+Note that there are no restructions on files above the system directory.
+
