@@ -33,6 +33,23 @@ Most should be available through your system's package manager.
 - autoconf (exactly version 2.64)
 - libtool
 
+If you are using Ubuntu 18.04, these are the required packages. You can remove then once the
+toolchain is built.
+
+```bash
+sudo apt install \
+    build-essential \
+    libbison-dev \
+    libfl-dev \
+    libgmp-dev \
+    libmpfr-dev \
+    libmpc-dev \
+    texinfo \
+    automake \
+    autoconf \
+    libtool
+```
+
 ## Building
 
 Follow these steps to build the RPOS Toolchain cross-compiler.
